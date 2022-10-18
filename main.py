@@ -53,7 +53,6 @@ class DatabaseKernel:
         cursor = connection.cursor()
         try:
             cursor.execute(query)
-            # connection.commit() # когда его нужно юзать?
             res_query = pd.DataFrame(cursor.fetchall())
             num_query = num_query + 1
             print("Query executed succesfully")
