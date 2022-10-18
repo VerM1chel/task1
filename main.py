@@ -50,7 +50,7 @@ class DatabaseKernel:
 
     def execute_query(self, query, num_query):
         connection = self.create_connection()
-        cursor = connection.cursor()  # нужно ли использовать try .. catch (или with) когда создаешь курсор? Ответ: нет, все норм
+        cursor = connection.cursor()
         try:
             cursor.execute(query)
             # connection.commit() # когда его нужно юзать?
